@@ -24,18 +24,13 @@ const container = document.getElementById('numeri');
 // timer di 30 secondi poi scompaiono i numeri del gioco
 
 setTimeout(startGame, 30000); {
-    container.innerText = ' ' + numbers + ' ';
+    container.innerHTML = ' ' + numbers + ' ';
 }
 
 // inizia il gioco
 
 function startGame() {
     container.style.display = "none";
-
-    let onefound = false;
-
-    console.log(onefound)
-
     for (let i = 0; i < 5; i++) {
         let userNumber
         userNumber = parseInt(prompt("inserisci il numero!"));
