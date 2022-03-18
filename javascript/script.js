@@ -32,6 +32,7 @@ setTimeout(startGame, 2000); {
 function startGame() {
     container.style.display = "none";
     for (let i = 0; i < 5; i++) {
+        let userNumber
         userNumber = parseInt(prompt("inserisci il numero!"));
         // comparo i numeri 
         if (numbers[0] === userNumber) {
