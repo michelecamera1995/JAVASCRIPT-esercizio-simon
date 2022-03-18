@@ -31,10 +31,15 @@ setTimeout(startGame, 2000); {
 
 function startGame() {
     container.style.display = "none";
+
+    let onefound = false;
+
+    console.log(onefound)
+
     for (let i = 0; i < 5; i++) {
         let userNumber
         userNumber = parseInt(prompt("inserisci il numero!"));
-        // comparo i numeri 
+        // comparo i numeri     
         if (numbers[0] === userNumber) {
             console.log("numero 1 trovato!");
             num1.classList.add('found');
