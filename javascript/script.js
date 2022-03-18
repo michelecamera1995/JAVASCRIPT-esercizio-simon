@@ -6,16 +6,26 @@ console.log("js-ok")
 
 // Timer di 30 secondi con un'array composto da 5 numeri casuali
 
-const numbers = createRandomNumberArray(5);
 
-const userArray = [];
+// carico gli elementi dall' HTML
+
+const numbers = createRandomNumberArray(5);
+const num1 = document.getElementById('num1')
+const num2 = document.getElementById('num2')
+const num3 = document.getElementById('num3')
+const num4 = document.getElementById('num4')
+const num5 = document.getElementById('num5')
+const container = document.getElementById('numeri');
 
 console.log(numbers)
 
+// timer di 30 secondi poi scompaiono i numeri del gioco
+
 setTimeout(startGame, 2000); {
-    const container = document.getElementById('numeri');
     container.innerText = ' ' + numbers + ' ';
 }
+
+// inizia il gioco
 
 function startGame() {
     const container = document.getElementById('numeri');
@@ -23,19 +33,18 @@ function startGame() {
     console.log(numeri)
     for (let i = 0; i < 5; i++) {
         userNumber = parseInt(prompt("inserisci il numero!"))
-        userArray.push(userNumber);
 
         // comparo i numeri 
         if (numbers[0] === userNumber) {
-            console.log("hai trovato il primo numero!")
+            num1.innerHTML = 'primo numero trovato!';
         } else if (numbers[1] === userNumber) {
-            console.log("hai trovato il secondo numero!")
+            num2.innerHTML = 'secondo numero trovato!';
         } else if (numbers[2] === userNumber) {
-            console.log("hai trovato il terzo numero!")
+            num3.innerHTML = 'terzo numero trovato!';
         } else if (numbers[3] === userNumber) {
-            console.log("hai trovato il quarto numero!")
+            num4.innerHTML = 'quarto numero trovato!';
         } else if (numbers[4] === userNumber) {
-            console.log("hai trovato il quinto numero!")
+            num5.innerHTML = 'quinto numero trovato!';
         }
     }
     console.log(userArray)
