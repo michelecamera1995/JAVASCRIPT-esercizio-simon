@@ -29,6 +29,7 @@ h1{
 .circles{
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 10px;
     width: 100%;
 }

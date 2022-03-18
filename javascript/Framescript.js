@@ -20,4 +20,27 @@ function generaNumeroRandom(min, max) {
     return generatedNumber;
 }
 
-//----------funzione genera numero casuale---------//
+//----------funzione controllo numero pari o dispari---------//
+
+function isEvenOrOdd(num) {
+    if (num % 2 === 0) {
+        return 'even';
+    } else {
+        return 'odd';
+    }
+}
+
+//----------controllo input numero---------//
+
+function askUserANumber(message) {
+
+    let valid = false;
+    let userInput;
+    while (valid === false) {
+        userInput = parseInt(prompt(message));
+        if (isNaN(userInput) === false) {
+            valid = true;
+        }
+    }
+    return userInput;
+}
