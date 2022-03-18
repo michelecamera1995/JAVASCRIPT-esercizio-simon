@@ -1,0 +1,54 @@
+body{
+    background-color: blue;
+}
+
+h1{
+    font-size: 6rem;
+}
+
+.square{
+    margin : 50px auto;
+    width: 80%;
+    margin : 50px 300;
+    height: 800px;
+    background-color: dodgerblue;
+    border-radius: 10%;
+    text-align: center;
+}
+
+.num{
+    display: flex;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+    margin: 30px;
+    font-size: 5rem;
+}
+
+.circles{
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+    width: 100%;
+}
+
+.circle{
+    margin: 5%;
+    border-radius: 50%;
+    height: 150px;
+    line-height: 150px;
+    vertical-align: middle;
+    text-align: center;
+    background-color: white;
+    width: 10%;
+    font-size: 5rem;
+    color: black;
+}
+
+.found{
+    background-color: greenyellow;
+}
+
+.wrong{
+    background-color: rgb(255, 47, 47);
+}

@@ -7,9 +7,12 @@ console.log("js-ok")
 // Timer di 30 secondi con un'array composto da 5 numeri casuali
 
 
-// carico gli elementi dall' HTML
+//dichiaro la funzione che genera un'array da 5 numeri casuali
 
 const numbers = createRandomNumberArray(5);
+
+// carico gli elementi dall' HTML
+
 const num1 = document.getElementById('num1')
 const num2 = document.getElementById('num2')
 const num3 = document.getElementById('num3')
@@ -28,24 +31,30 @@ setTimeout(startGame, 2000); {
 // inizia il gioco
 
 function startGame() {
-    const container = document.getElementById('numeri');
     container.style.display = "none";
-    console.log(numeri)
     for (let i = 0; i < 5; i++) {
-        userNumber = parseInt(prompt("inserisci il numero!"))
-
+        userNumber = parseInt(prompt("inserisci il numero!"));
         // comparo i numeri 
         if (numbers[0] === userNumber) {
-            num1.innerHTML = 'primo numero trovato!';
+            console.log("numero 1 trovato!");
+            num1.classList.add('found');
+            num1.innerHTML = userNumber;
         } else if (numbers[1] === userNumber) {
-            num2.innerHTML = 'secondo numero trovato!';
+            console.log("numero 2 trovato!");
+            num2.classList.add('found');
+            num2.innerHTML = userNumber;
         } else if (numbers[2] === userNumber) {
-            num3.innerHTML = 'terzo numero trovato!';
+            console.log("numero 3 trovato!");
+            num3.classList.add('found');
+            num3.innerHTML = userNumber;
         } else if (numbers[3] === userNumber) {
-            num4.innerHTML = 'quarto numero trovato!';
+            console.log("numero 4 trovato!");
+            num4.classList.add('found');
+            num4.innerHTML = userNumber;
         } else if (numbers[4] === userNumber) {
-            num5.innerHTML = 'quinto numero trovato!';
+            console.log("numero 5 trovato!");
+            num5.classList.add('found');
+            num5.innerHTML = userNumber;
         }
     }
-    console.log(userArray)
 }
