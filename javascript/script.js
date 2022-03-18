@@ -23,7 +23,7 @@ const container = document.getElementById('numeri');
 
 // timer di 30 secondi poi scompaiono i numeri del gioco
 
-setTimeout(startGame, 2000); {
+setTimeout(startGame, 30000); {
     container.innerText = ' ' + numbers + ' ';
 }
 
