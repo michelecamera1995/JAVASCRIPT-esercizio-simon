@@ -10,6 +10,7 @@ console.log("js-ok")
 //dichiaro la funzione che genera un'array da 5 numeri casuali
 
 const numbers = createRandomNumberArray(5);
+//console.log(numbers)
 
 // carico gli elementi dall' HTML
 
@@ -19,8 +20,6 @@ const num3 = document.getElementById('num3')
 const num4 = document.getElementById('num4')
 const num5 = document.getElementById('num5')
 const container = document.getElementById('numeri');
-
-console.log(numbers)
 
 // timer di 30 secondi poi scompaiono i numeri del gioco
 
