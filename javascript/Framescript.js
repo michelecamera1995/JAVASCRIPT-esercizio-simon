@@ -30,7 +30,7 @@ function isEvenOrOdd(num) {
     }
 }
 
-//----------controllo input numero---------//
+//----------controllo l'input---------//
 
 function askUserANumber(message) {
 
@@ -44,3 +44,5 @@ function askUserANumber(message) {
     }
     return userInput;
 }
+
+//---------ùùùùùùùùùùùùùùùùù----------//

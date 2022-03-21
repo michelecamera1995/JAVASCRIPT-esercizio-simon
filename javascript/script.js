@@ -10,7 +10,8 @@ console.log("js-ok")
 //dichiaro la funzione che genera un'array da 5 numeri casuali
 
 const numbers = createRandomNumberArray(5);
-//console.log(numbers)
+const timer = 2;
+console.log(numbers)
 
 // carico gli elementi dall' HTML
 
@@ -23,38 +24,58 @@ const container = document.getElementById('numeri');
 
 // timer di 30 secondi poi scompaiono i numeri del gioco
 
-setTimeout(startGame, 30000); {
-    container.innerHTML = ' ' + numbers + ' ';
+setTimeout(startGame, timer * 1000); {
+    container.innerHTML = numbers.join('  -   ');
 }
 
 // inizia il gioco
 
 function startGame() {
     container.style.display = "none";
+    let userNumber = [];
     for (let i = 0; i < 5; i++) {
-        let userNumber
-        userNumber = parseInt(prompt("inserisci il numero!"));
-        // comparo i numeri     
-        if (numbers[0] === userNumber) {
+        userImput = parseInt(prompt("inserisci il numero!"));
+        userNumber.push(userImput);
+        console.log(userNumber);
+
+        // comparo i numeri  
+
+        if (numbers[0] === userNumber[0]) {
             console.log("numero 1 trovato!");
             num1.classList.add('found');
-            num1.innerHTML = userNumber;
-        } else if (numbers[1] === userNumber) {
+            num1.innerHTML = userNumber[0]
+        } else {
+            num1.classList.add('wrong');
+        }
+
+        if (numbers[1] === userNumber[1]) {
             console.log("numero 2 trovato!");
             num2.classList.add('found');
-            num2.innerHTML = userNumber;
-        } else if (numbers[2] === userNumber) {
+            num2.innerHTML = userNumber[1];
+        } else {
+            num1.classList.add('wrong');
+        }
+
+        if (numbers[2] === userNumber[2]) {
             console.log("numero 3 trovato!");
             num3.classList.add('found');
-            num3.innerHTML = userNumber;
-        } else if (numbers[3] === userNumber) {
+            num3.innerHTML = userNumber[2];
+        } else {
+            num1.classList.add('wrong');
+        }
+
+        if (numbers[3] === userNumber[3]) {
             console.log("numero 4 trovato!");
             num4.classList.add('found');
-            num4.innerHTML = userNumber;
-        } else if (numbers[4] === userNumber) {
+            num4.innerHTML = userNumber[3];
+        } else {
+            num1.classList.add('wrong');
+        }
+
+        if (numbers[4] === userNumber[4]) {
             console.log("numero 5 trovato!");
             num5.classList.add('found');
-            num5.innerHTML = userNumber;
+            num5.innerHTML = userNumber[4];
         }
     }
 }
