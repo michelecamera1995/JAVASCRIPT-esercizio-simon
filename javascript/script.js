@@ -10,8 +10,8 @@ console.log("js-ok")
 //dichiaro la funzione che genera un'array da 5 numeri casuali
 
 const numbers = createRandomNumberArray(5);
-const timer = 2;
-console.log(numbers)
+const timer = 30;
+//console.log(numbers)
 
 // carico gli elementi dall' HTML
 
@@ -36,7 +36,7 @@ function startGame() {
     for (let i = 0; i < 5; i++) {
         userImput = parseInt(prompt("inserisci il numero!"));
         userNumber.push(userImput);
-        console.log(userNumber);
+        //console.log(userNumber);
 
         // comparo i numeri  
 
@@ -44,32 +44,24 @@ function startGame() {
             console.log("numero 1 trovato!");
             num1.classList.add('found');
             num1.innerHTML = userNumber[0]
-        } else {
-            num1.classList.add('wrong');
         }
 
         if (numbers[1] === userNumber[1]) {
             console.log("numero 2 trovato!");
             num2.classList.add('found');
             num2.innerHTML = userNumber[1];
-        } else {
-            num1.classList.add('wrong');
         }
 
         if (numbers[2] === userNumber[2]) {
             console.log("numero 3 trovato!");
             num3.classList.add('found');
             num3.innerHTML = userNumber[2];
-        } else {
-            num1.classList.add('wrong');
         }
 
         if (numbers[3] === userNumber[3]) {
             console.log("numero 4 trovato!");
             num4.classList.add('found');
             num4.innerHTML = userNumber[3];
-        } else {
-            num1.classList.add('wrong');
         }
 
         if (numbers[4] === userNumber[4]) {
