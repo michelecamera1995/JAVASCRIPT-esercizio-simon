@@ -10,7 +10,7 @@ console.log("js-ok")
 //dichiaro la funzione che genera un'array da 5 numeri casuali
 
 const numbers = createRandomNumberArray(5);
-const timer = 30;
+const timer = 1;
 //console.log(numbers)
 
 // carico gli elementi dall' HTML
@@ -44,27 +44,19 @@ function startGame() {
             console.log("numero 1 trovato!");
             num1.classList.add('found');
             num1.innerHTML = userNumber[0]
-        }
-
-        if (numbers[1] === userNumber[1]) {
+        } else if (numbers[1] === userNumber[1]) {
             console.log("numero 2 trovato!");
             num2.classList.add('found');
             num2.innerHTML = userNumber[1];
-        }
-
-        if (numbers[2] === userNumber[2]) {
+        } else if (numbers[2] === userNumber[2]) {
             console.log("numero 3 trovato!");
             num3.classList.add('found');
             num3.innerHTML = userNumber[2];
-        }
-
-        if (numbers[3] === userNumber[3]) {
+        } else if (numbers[3] === userNumber[3]) {
             console.log("numero 4 trovato!");
             num4.classList.add('found');
             num4.innerHTML = userNumber[3];
-        }
-
-        if (numbers[4] === userNumber[4]) {
+        } else if (numbers[4] === userNumber[4]) {
             console.log("numero 5 trovato!");
             num5.classList.add('found');
             num5.innerHTML = userNumber[4];
